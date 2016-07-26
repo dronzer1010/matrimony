@@ -1,0 +1,122 @@
+<div ng-controller="notContactedController">
+ <div class="container">
+   <div class="breadcrumb1">
+     <ul>
+        <li><a href="index1.html">Home</a></li>
+        <span class="divider">&nbsp;|&nbsp;</span>
+        <a class="current-page" href="#/">Matches</a>
+        <span class="divider">&nbsp;|&nbsp;</span>
+        <a class="current-page" href="#/not-contacted">Not Contacted Yet</a>
+        <span class="divider">&nbsp;|&nbsp;</span>
+        <a class="current-page" href="#/viewed-profiles">View Profiles</a>
+		
+     </ul>
+   </div>
+<div class="col-md-9 profile_left2">
+     <form>
+	  <div class="form_but2">
+		<label class="col-md-2 control-lable1" for="sex">Don't Show : </label>
+		<div class="col-md-10 form_radios">
+			<input type="checkbox" class="radio_1"> Don't show already viewed &nbsp;&nbsp;&nbsp;
+			<input type="checkbox" class="radio_1" checked="checked"> Don't show already contacted &nbsp;&nbsp;&nbsp;
+			<input type="checkbox" class="radio_1" checked="checked"> Show profiles with photo
+		</div>
+		<div class="clearfix"> </div>
+	  </div>
+	 </form>
+ <div class="jobs-item with-thumb" ng-repeat="profile in filteredProfiles | filter : { religion : religionModel}">
+   <div class="thumb_top">
+    <div class="thumb"><a href="jobs_single.html"><img src="images/a8.jpg" class="img-responsive" alt=""/></a></div>
+    <div class="jobs_right">
+		<h6 class="title"><a href="">{{profile.name}} </a></h6>
+		<ul class="top-btns">
+		  <li><a href="#" class="fa fa-facebook"></a></li>
+		  <li><a href="#" class="fa fa-twitter"></a></li>
+		  <li><a href="#" class="fa fa-google-plus"></a></li>
+		</ul>
+		<ul class="login_details1">
+		  <li>Last Login : {{profile.lastLogin}}</li>
+		</ul>
+		<p class="description">{{profile.age}} years, {{profile.height}} | <span class="m_1">Reliogion</span> : {{profile.religion}} | <span class="m_1">Education</span> :{{profile.education}} | <span class="m_1">Occupation</span> : Software Professional<br><a href="#/profile/{{profile.id}}" class="read-more">view full profile</a></p>
+	</div>
+	<div class="clearfix"> </div>
+   </div>
+   <div class="thumb_bottom">
+   	  <div class="thumb"><a href="" class="photo_view">Add Photo</a></div>
+   	   <div class="thumb_but"><a href="" class="photo_view">Send Mail</a></div>
+   	  <div class="clearfix"> </div>
+   </div>
+  </div>
+<uib-pagination total-items="viewedProfiles.length" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+</div>
+	<div class="col-md-3 match_right">
+  <div class="profile_search1">
+	   <form novalidate>
+		  <input type="text" class="m_1" name="ne" size="30" required="" placeholder="Enter Profile ID :" ng-model="searchId">
+		  <a href="#/profile/{{searchId}}">Go</a>	   
+		</form>
+   </div>
+    <ul class="menu">
+		<li class="item1"><h3 class="m_2">Religion</h3>
+		  <ul class="cute">
+			<li class="subitem1" ><a ng-click="changeReligion('Muslim')">Muslim </a></li>
+			<li class="subitem2" ><a ng-click="changeReligion('Hindu')">Hindu</a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Profile type</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">with Photo (3) </a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Marital Status</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">Unmarried (2) </a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Mother Tongue</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">English </a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Education</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">Bachelors-Engineering </a></li>
+			<li class="subitem1"><a href="#">Masters-Engineering </a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Occupation</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">Engineer-Non IT (2) </a></li>
+			<li class="subitem1"><a href="#">Software Professional (3)</a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Physical Status</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">Normal (2) </a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Eating Habits</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">Non Vegetarian (3)</a></li>
+			<li class="subitem1"><a href="#">Vegetarian (2)</a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Smoking</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">Not Specified (3)</a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Drinking</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">Not Specified (3)</a></li>
+			<li class="subitem1"><a href="#">Never Drinks (3)</a></li>
+		  </ul>
+		</li>
+		<li class="item1"><h3 class="m_2">Profile Created by</h3>
+		  <ul class="cute">
+			<li class="subitem1"><a href="#">Self (1)</a></li>
+		  </ul>
+		</li>
+	  </ul>
+   </div>
+</div>
