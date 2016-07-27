@@ -13,7 +13,8 @@
 		<link href="public/css/style.css" rel='stylesheet' type='text/css' />
 		<link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link href="public/css/font-awesome.css" rel="stylesheet"> 
+		<link href="public/css/font-awesome.css" rel="stylesheet">
+		<link href="public/css/toaster.css" rel="stylesheet"> 
 		</head>
 <body ng-controller="mainController">
 <div class="navbar navbar-inverse-blue navbar">
@@ -83,11 +84,12 @@
 		</div>
 	</div>
 </div>
-    
+
 <script src="public/js/jquery.min.js"></script>
 <script src="public/js/bootstrap.min.js"></script>
 <script src="public/js/angular.min.js"></script>
 <script src="public/js/angular-route.js"></script>
+<script src="public/js/angular-animate.min.js"></script>
 <script src="public/js/toaster.js"></script>
 <script src="public/js/ui-bootstrap-angular.js"></script>
 <script src="app/app.js"></script>
@@ -178,5 +180,5 @@
         
     </script>
     </body>
-
+  <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
 </html>

@@ -11,9 +11,9 @@ angular.module('matrimonialApp')
     		var begin = (($scope.currentPage - 1) * $scope.numOfProfilePerPage)
     			, end = begin + $scope.numOfProfilePerPage;
     			
-    				   		dataService.get()
-	   					.success(function(data){
-	   						$scope.profiles=data;	
+    				   		dataService.get('allprofiles')
+	   					.then(function(data){
+	   						$scope.profiles=data['data'];	
 	   						$scope.filteredProfiles = $scope.profiles.slice(begin, end);
 	   					});
     			

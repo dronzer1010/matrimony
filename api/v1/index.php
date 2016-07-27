@@ -12,6 +12,10 @@ $app = new \Slim\Slim();
 $user_id = NULL;
 
 require_once 'auth.php';
+require_once 'profileAPI.php';
+
+
+
 // Access-Control headers are received during OPTIONS requests
     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 

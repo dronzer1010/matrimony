@@ -12,7 +12,7 @@ angular.module('matrimonialApp')
 	   		dataService.post('signUp' ,{
 	   			customer : user
 	   		}).then(function(results){
-	   			
+	   			dataService.toast(results);
 	   			if(results.status == "success"){
 	   				$location.path('matches');
 	   			}else{
@@ -26,6 +26,7 @@ angular.module('matrimonialApp')
         dataService.post('login', {
             customer: user
         }).then(function (results) {
+        	dataService.toast(results);
             if (results.status == "success") {
                $location.path('matches');
             }

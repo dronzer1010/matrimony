@@ -1,4 +1,4 @@
-angular.module('matrimonialApp' ,['ngRoute' ,'ui.bootstrap'])
+angular.module('matrimonialApp' ,['ngRoute' ,'ui.bootstrap','ngAnimate','toaster'])
 		.config(['$routeProvider' ,'$locationProvider' ,function($routeProvider , $locationProvider){
 
 				$routeProvider
@@ -23,7 +23,30 @@ angular.module('matrimonialApp' ,['ngRoute' ,'ui.bootstrap'])
 					.when('/profile/:id' ,{
 						templateUrl : 'app/views/view_profile.html' ,
 						controller : 'profileDetailController'
-					});
-		}]);
+					})
+					.otherwise({
+                		redirectTo: '/'
+            		});
+		}])
+		.run(function ($rootScope, $location, dataService) {
+        $rootScope.$on("$routeChangeStart", function (event, next, current) {
+            $rootScope.authenticated = false;
+            dataService.get('session').then(function (results) {
+                if (results.uid) {
+                    $rootScope.authenticated = true;
+                    $rootScope.uid = results.uid;
+                    $rootScope.name = results.name;
+                    $rootScope.email = results.email;
+                } else {
+                    var nextUrl = next.$$route.originalPath;
+                    if (nextUrl == '/' || nextUrl == '/') {
+
+                    } else {
+                        $location.path("/");
+                    }
+                }
+            });
+        });
+    });
 
 
