@@ -6,7 +6,7 @@
 		<meta name="keywords" content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
+		<link href="public/css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 		<!-- Custom Theme files -->
@@ -21,7 +21,7 @@
 			<div class="navbar-inner navbar-inner_1">
 				<div class="container">
 						
-						<a class="brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+						<a class="brand" href="index.html"><img src="public/images/logo.png" alt="logo"></a>
 						<div class="pull-right">
 							<nav class="navbar nav_bottom" role="navigation">
 								
