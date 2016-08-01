@@ -25,7 +25,6 @@
 						<a class="brand" href="index.html"><img src="public/images/logo.png" alt="logo"></a>
 						<div class="pull-right">
 							<nav class="navbar nav_bottom" role="navigation">
-								
 								<!-- Brand and toggle get grouped for better mobile display -->
 								<div class="navbar-header nav_2">
 									<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">Menu
@@ -38,7 +37,7 @@
 								</div> 
 							</nav>
 						</div> <!-- end pull-right -->
-						
+						<a ng-click="logout()" class="pull-right">Logout</a>
 					</div>
 			</div>
 		</div>

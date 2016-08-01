@@ -37,9 +37,13 @@ angular.module('matrimonialApp' ,['ngRoute' ,'ui.bootstrap','ngAnimate','toaster
                     $rootScope.uid = results.uid;
                     $rootScope.name = results.name;
                     $rootScope.email = results.email;
+                    var nextUrl = next.$$route.originalPath;
+                    if(nextUrl == '/'){
+                    	$location.path("/matches");
+                    }
                 } else {
                     var nextUrl = next.$$route.originalPath;
-                    if (nextUrl == '/' || nextUrl == '/') {
+                    if (nextUrl == '/') {
 
                     } else {
                         $location.path("/");
