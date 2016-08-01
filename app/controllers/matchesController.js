@@ -4,16 +4,16 @@ angular.module('matrimonialApp')
 			$scope.profiles=[];
 			$scope.filteredProfiles=[];
 	   		$scope.currentPage=1;
-	   		$scope.numOfProfilePerPage=5;
-	   		$scope.maxSize=5;
+	   		$scope.numOfProfilePerPage=15;
+	   		$scope.maxSize=1000;
 	   		$scope.religionModel="";
 	   		$scope.pageChanged= function() {
     		var begin = (($scope.currentPage - 1) * $scope.numOfProfilePerPage)
     			, end = begin + $scope.numOfProfilePerPage;
     			
-    				   		dataService.get()
-	   					.success(function(data){
-	   						$scope.profiles=data;	
+    				   		dataService.get('allprofiles')
+	   					.then(function(data){
+	   						$scope.profiles=data['data'];	
 	   						$scope.filteredProfiles = $scope.profiles.slice(begin, end);
 	   					});
     			

@@ -9,7 +9,7 @@
    </div>
    <div class="profile">
    	 <div class="col-md-8 profile_left">
-   	 	<h2>{{selectedProfile.name}}</h2>
+   	 	<h2>{{selectedProfile.firstname + " " + selectedProfile.lastname}}</h2>
    	 	<div class="col_3">
    	        <div class="col-sm-4 row_2">
 				<img src="{{selectedProfile.img}}"/>
@@ -23,7 +23,7 @@
 						</tr>
 					    <tr class="opened">
 							<td class="day_label">Last Login :</td>
-							<td class="day_value">{{selectedProfile.lastLogin}}</td>
+							<td class="day_value">{{selectedProfile.lastlogin}}</td>
 						</tr>
 					    <tr class="opened">
 							<td class="day_label">Religion :</td>
@@ -31,11 +31,11 @@
 						</tr>
 					    <tr class="opened">
 							<td class="day_label">Marital Status :</td>
-							<td class="day_value">{{selectedProfile.maritalStatus}}</td>
+							<td class="day_value">{{selectedProfile.maritalstatus}}</td>
 						</tr>
 					    <tr class="opened">
 							<td class="day_label">Location :</td>
-							<td class="day_value">{{selectedProfile.location}}</td>
+							<td class="day_value">{{selectedProfile.district}}</td>
 						</tr>
 					    <tr class="closed">
 							<td class="day_label">Profile Created by :</td>
@@ -43,7 +43,7 @@
 						</tr>
 					    <tr class="closed">
 							<td class="day_label">Education :</td>
-							<td class="day_value closed"><span>{{selectedProfile.education}}</span></td>
+							<td class="day_value closed"><span>{{selectedProfile.educationcategory}}</span></td>
 						</tr>
 				    </tbody>
 				</table>
@@ -72,141 +72,191 @@
 				    	<div class="col-md-6 basic_1-left">
 				    	  <table class="table_working_hours">
 				        	<tbody>
-				        		<tr class="opened_1">
-									<td class="day_label">Name :</td>
-									<td class="day_value">Lorem</td>
+							<tr class="opened">
+									<td class="day_label">Profile Id :</td>
+									<td class="day_value">{{selectedProfile.pid}}</td>
 								</tr>
 							    <tr class="opened">
-									<td class="day_label">Marital Status :</td>
-									<td class="day_value">Single</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Body Type :</td>
-									<td class="day_value">Average</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Marital Status :</td>
-									<td class="day_value">Single</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Height :</td>
-									<td class="day_value">28, 5ft 5in / 163cm</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Physical Status :</td>
-									<td class="day_value closed"><span>Not Specified</span></td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Profile Created by :</td>
-									<td class="day_value closed"><span>Self</span></td>
+									<td class="day_label">gender :</td>
+									<td class="day_value">{{selectedProfile.gender}}</td>
 								</tr>
 								<tr class="opened">
-									<td class="day_label">Drink :</td>
-									<td class="day_value closed"><span>No</span></td>
+									<td class="day_label">Email :</td>
+									<td class="day_value">{{selectedProfile.email}}</td>
 								</tr>
+				        		<tr class="opened_1">
+									<td class="day_label">Name :</td>
+									<td class="day_value">{{selectedProfile.firstname + " " + selectedProfile.lastname}}</td>
+								</tr>
+								 <tr class="closed">
+							        <td class="day_label">Profile Created by :</td>
+							        <td class="day_value closed"><span>{{selectedProfile.createdBy}}</span></td>
+						        </tr>
+								<tr class="opened">
+									<td class="day_label">Date of Birth :</td>
+									<td class="day_value closed"><span>{{selectedProfile.edob}}</span></td>
+								</tr>
+							   <tr class="opened_1">
+									<td class="day_label">Religion :</td>
+									<td class="day_value">{{selectedProfile.religion}}</td>
+								</tr>
+							    <tr class="opened">
+									<td class="day_label">Caste :</td>
+									<td class="day_value">{{selectedProfile.caste}}</td>
+								</tr>
+								<tr class="opened_1">
+									<td class="day_label">Mothertongue :</td>
+									<td class="day_value">{{selectedProfile.mothertongue}}</td>
+								</tr>
+							    <tr class="opened">
+									<td class="day_label">Residing :</td>
+									<td class="day_value">{{selectedProfile.residing}}</td>
+								</tr>
+								<tr class="opened_1">
+									<td class="day_label">Mobileno :</td>
+									<td class="day_value">{{selectedProfile.mobileno}}</td>
+								</tr>
+							    <tr class="opened">
+									<td class="day_label">Phoneno :</td>
+									<td class="day_value">{{selectedProfile.phoneno}}</td>
+								</tr>
+							    
+							    
+							   
+							    
+							   
+							   
+							    
 						    </tbody>
 				          </table>
 				         </div>
-				         <div class="col-md-6 basic_1-left">
-				          <table class="table_working_hours">
-				        	<tbody>
-				        		<tr class="opened_1">
-									<td class="day_label">Age :</td>
-									<td class="day_value">28 Yrs</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Mother Tongue :</td>
-									<td class="day_value">Hindi</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Complexion :</td>
-									<td class="day_value">Fair</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Weight :</td>
-									<td class="day_value">45</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Blood Group :</td>
-									<td class="day_value">B+</td>
-								</tr>
-							    <tr class="closed">
-									<td class="day_label">Diet :</td>
-									<td class="day_value closed"><span>Non-Veg</span></td>
-								</tr>
-							    <tr class="closed">
-									<td class="day_label">Smoke :</td>
-									<td class="day_value closed"><span>No</span></td>
-								</tr>
-						    </tbody>
-				        </table>
-				        </div>
+				        
 				        <div class="clearfix"> </div>
 				    </div>
-				    <div class="basic_1">
-				    	<h3>Religious / Social & Astro Background</h3>
-				    	<div class="col-md-6 basic_1-left">
-				    	  <table class="table_working_hours">
-				        	<tbody>
-				        		<tr class="opened">
-									<td class="day_label">Time of Birth :</td>
-									<td class="day_value">Not Specified</td>
-								</tr>
-				        		<tr class="opened">
-									<td class="day_label">Caste :</td>
-									<td class="day_value">Not Specified</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Date of Birth :</td>
-									<td class="day_value closed"><span>01-05-1988</span></td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Place of Birth :</td>
-									<td class="day_value closed"><span>Not Specified</span></td>
-								</tr>
-							 </tbody>
-				          </table>
-				         </div>
+				    
+				    	
 				         <div class="col-md-6 basic_1-left">
 				          <table class="table_working_hours">
 				        	<tbody>
-				        		<tr class="opened_1">
-									<td class="day_label">Religion :</td>
-									<td class="day_value">Hindu</td>
+							<tr class="opened">
+							<td class="day_label">Marital Status :</td>
+							<td class="day_value">{{selectedProfile.maritalstatus}}</td>
+						</tr>
+						<tr class="opened">
+									<td class="day_label">Complexion :</td>
+									<td class="day_value">{{selectedProfile.complexion}}</td>
 								</tr>
-							    <tr class="opened">
-									<td class="day_label">Sub Caste :</td>
-									<td class="day_value">Not Specified</td>
+				        	<tr class="opened">
+									<td class="day_label">Phisicallychallenged :</td>
+									<td class="day_value">{{selectedProfile.phisicallychallenged}}</td>
 								</tr>
-							    <tr class="opened">
-									<td class="day_label">Raasi :</td>
-									<td class="day_value">Kanya</td>
+                                 <tr class="opened">
+									<td class="day_label">height :</td>
+									<td class="day_value">{{selectedProfile.height}}</td>
 								</tr>
+                                    <tr class="opened">
+									<td class="day_label">borncitizenship :</td>
+									<td class="day_value">{{selectedProfile.borncitizenship}}</td>
+								</tr>								
 							</tbody>
 				        </table>
 				        </div>
 				        <div class="clearfix"> </div>
 				    </div>
-				    <div class="basic_1 basic_2">
+				    <div class="basic_1">
 				    	<h3>Education & Career</h3>
-				    	<div class="basic_1-left">
+				    	<div class="col-md-6 basic_1-left">
 				    	  <table class="table_working_hours">
 				        	<tbody>
 				        		<tr class="opened">
 									<td class="day_label">Education   :</td>
-									<td class="day_value">Engineering</td>
+									<td class="day_value">{{selectedProfile.educationcategory}}</td>
 								</tr>
 				        		<tr class="opened">
 									<td class="day_label">Education Detail :</td>
-									<td class="day_value">Software Engineer</td>
+									<td class="day_value">{{selectedProfile.specialization}}</td>
 								</tr>
 							    <tr class="opened">
 									<td class="day_label">Occupation Detail :</td>
-									<td class="day_value closed"><span>There are many variations of passages of Lorem Ipsum available</span></td>
+									<td class="day_value closed"><span>{{selectedProfile.employedin}}</span></td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">Profession group  :</td>
+									<td class="day_value closed"><span>{{selectedProfile.professiongroup}}</span></td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">Profession Detail :</td>
+									<td class="day_value closed"><span>{{selectedProfile.profession}}</span></td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">Company name :</td>
+									<td class="day_value closed"><span>{{selectedProfile.companyname}}</span></td>
 								</tr>
 							    <tr class="opened">
-									<td class="day_label">Annual Income :</td>
-									<td class="day_value closed"><span>Rs.5,00,000 - 6,00,000</span></td>
+									<td class="day_label">Monthly Income :</td>
+									<td class="day_value closed"><span>{{selectedProfile.monthlyincome}}</span></td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">State :</td>
+									<td class="day_value">{{selectedProfile.state}}</td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">District :</td>
+									<td class="day_value">{{selectedProfile.district}}</td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">City :</td>
+									<td class="day_value">{{selectedProfile.city}}</td>
+								</tr>
+								</div>
+								</div>
+								
+							  <div class="basic_1">
+				    	<h4>Family Details</h4>
+				    	<div class="col-md-6 basic_1-left">
+				    	  <table class="table_working_hours">
+				        	<tbody>	
+								
+								
+							<tr class="opened">
+									<td class="day_label">Father's name :</td>
+									<td class="day_value">{{selectedProfile.fathername}}</td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">Father's education :</td>
+									<td class="day_value">{{selectedProfile.fathereducation}}</td>
+								</tr>
+				        		<tr class="opened">
+									<td class="day_label">Father's Occupation :</td>
+									<td class="day_value">{{selectedProfile.fatherprofession}}</td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">Mother's name :</td>
+									<td class="day_value">{{selectedProfile.mothername}}</td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">Mothers's education :</td>
+									<td class="day_value">{{selectedProfile.mothereducation}}</td>
+								</tr>
+				        		<tr class="opened">
+									<td class="day_label">Mother's Occupation :</td>
+									<td class="day_value">{{selectedProfile.motherprofession}}</td>
+								</tr>
+								<tr class="opened">
+									<td class="day_label">Father's native palec :</td>
+									<td class="day_value">{{selectedProfile.fathernative}}</td>
+								</tr>
+				        		<tr class="opened">
+									<td class="day_label">Mother's native place :</td>
+									<td class="day_value">{{selectedProfile.mothernative}}</td>
+								</tr>
+							    <tr class="opened">
+									<td class="day_label">No. of Brothers :</td>
+									<td class="day_value closed"><span>{{selectedProfile.brothers}}</span></td>
+								</tr>
+							    <tr class="opened">
+									<td class="day_label">No. of Sisters :</td>
+									<td class="day_value closed"><span>{{selectedProfile.sisters}}</span></td>
 								</tr>
 							 </tbody>
 				          </table>
@@ -216,105 +266,20 @@
 				  </div>
 				  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
 				    <div class="basic_3">
-				    	<h4>Family Details</h4>
+				    	
 				    	<div class="basic_1 basic_2">
 				    	<h3>Basics</h3>
 				    	<div class="col-md-6 basic_1-left">
 				    	  <table class="table_working_hours">
 				        	<tbody>
-				        		<tr class="opened">
-									<td class="day_label">Father's Occupation :</td>
-									<td class="day_value">Not Specified</td>
-								</tr>
-				        		<tr class="opened">
-									<td class="day_label">Mother's Occupation :</td>
-									<td class="day_value">Not Specified</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">No. of Brothers :</td>
-									<td class="day_value closed"><span>Not Specified</span></td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">No. of Sisters :</td>
-									<td class="day_value closed"><span>Not Specified</span></td>
-								</tr>
+							
+							
 							 </tbody>
 				          </table>
 				         </div>
 				       </div>
 				    </div>
-				 </div>
-				 <div role="tabpanel" class="tab-pane fade" id="profile1" aria-labelledby="profile-tab1">
-				    <div class="basic_1 basic_2">
-				       <div class="basic_1-left">
-				    	  <table class="table_working_hours">
-				        	<tbody>
-				        		<tr class="opened">
-									<td class="day_label">Age   :</td>
-									<td class="day_value">28 to 35</td>
-								</tr>
-				        		<tr class="opened">
-									<td class="day_label">Marital Status :</td>
-									<td class="day_value">Single</td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Body Type :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-							    <tr class="opened">
-									<td class="day_label">Complexion :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Height 5ft 9 in / 175cm :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Diet :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Kujadosham / Manglik :</td>
-									<td class="day_value closed"><span>No</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Religion :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Caste :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Mother Tongue :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Education :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Occupation :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Country of Residence :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">State :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-								<tr class="opened">
-									<td class="day_label">Residency Status :</td>
-									<td class="day_value closed"><span>Doesn't matter</span></td>
-								</tr>
-							 </tbody>
-				          </table>
-				        </div>
-				     </div>
-				 </div>
-		     </div>
+				</div>
 		  </div>
 	   </div>
    	 </div>
