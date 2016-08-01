@@ -6,14 +6,15 @@
 		<meta name="keywords" content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
+		<link href="public/css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 		<!-- Custom Theme files -->
 		<link href="public/css/style.css" rel='stylesheet' type='text/css' />
 		<link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link href="public/css/font-awesome.css" rel="stylesheet"> 
+		<link href="public/css/font-awesome.css" rel="stylesheet">
+		<link href="public/css/toaster.css" rel="stylesheet"> 
 		</head>
 <body ng-controller="mainController">
 <div class="navbar navbar-inverse-blue navbar">
@@ -21,7 +22,7 @@
 			<div class="navbar-inner navbar-inner_1">
 				<div class="container">
 						
-						<a class="brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+						<a class="brand" href="index.html"><img src="public/images/logo.png" alt="logo"></a>
 						<div class="pull-right">
 							<nav class="navbar nav_bottom" role="navigation">
 								
@@ -83,11 +84,12 @@
 		</div>
 	</div>
 </div>
-    
+
 <script src="public/js/jquery.min.js"></script>
 <script src="public/js/bootstrap.min.js"></script>
 <script src="public/js/angular.min.js"></script>
 <script src="public/js/angular-route.js"></script>
+<script src="public/js/angular-animate.min.js"></script>
 <script src="public/js/toaster.js"></script>
 <script src="public/js/ui-bootstrap-angular.js"></script>
 <script src="app/app.js"></script>
@@ -178,5 +180,5 @@
         
     </script>
     </body>
-
+  <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
 </html>
