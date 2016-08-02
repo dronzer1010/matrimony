@@ -1,4 +1,4 @@
-angular.module('matrimonialApp' ,['ngRoute' ,'ui.bootstrap','ngAnimate','toaster'])
+angular.module('matrimonialApp' ,['ngRoute','ui.bootstrap','ngAnimate','toaster'])
 		.config(['$routeProvider' ,'$locationProvider' ,function($routeProvider , $locationProvider){
 
 				$routeProvider

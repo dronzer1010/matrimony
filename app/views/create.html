@@ -1,17 +1,38 @@
 <div ng-controller="createController">
+<script>
+					
+			
+			angular.module('ui.bootstrap').controller('TabsCtrl', function ($scope, $window) {
+  $scope.myTab = [
+    { title:'Basic details'},
+	{ title:'Profile details'},
+    { title:'Family details'},
+    { title:'Upload Photo'}
+  ];
+
+    $scope.model = {
+    name: 'myTab'
+  };
+});
+			
+			
+		</script>
 <div class="container">
 					
 					<div class="col-md-12 members_box2">
 						<h3 style="text-align:center;">Vaishnavi Matrimonial Profile details</h3>
 						<div class="col_4">
 							<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+								
+								
+															
 								<ul id="myTab" class=" nav-tabs nav-tabs1 nav-tab-pnt" role="tablist">
 									<li role="presentation" class="active"><a href="#home" id="" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Basic details</a></li>
 									<li role="presentation"><a href="#profile" role="tab" id="" data-toggle="tab" aria-controls="profile">Profile details</a></li>
 									<li role="presentation"><a href="#profile1" role="tab" id="" data-toggle="tab" aria-controls="profile">Family details</a></li>
-									<li role="presentation"><a href="#profile2" role="tab" id="" data-toggle="tab" aria-controls="profile">photos upload</a></li>
+									<li role="presentation"><a href="#profile2" role="tab" id="" data-toggle="tab" aria-controls="profile">Photos Upload</a></li>
 								</ul>
-								<form  id="" method="post" role="form" action="creatprofile3.php "style="display: block;" novalidate>
+								<form  id="" method="post" role="form" method="post" style="display: block;" novalidate>
 								<div id="myTabContent" class="tab-content">
 									
 														<div role="tabpanel" class="tab-pane fade in active form-2" id="home" aria-labelledby="home-tab">
@@ -321,7 +342,7 @@
 																<input type="text" name="phoneno" ng-model="create.phoneno" placeholder="PhoneNo" class="showpassword">
 															</p>
 															<p class="clearfix">
-																<input type="button" name="next" value="Next" ng-model="create." class="btn_1 nxt_btn" />
+															<button type="button" class="btn_1 nxt_btn" ng-click="active = 1">Next</button>
 															</p>
 														</div>
 														<div role="tabpanel" class="tab-pane fade form-2" id="profile" aria-labelledby="profile-tab">
@@ -755,7 +776,7 @@
 																</select>
 															</p>
 															<p class="clearfix">
-																<input type="button" name="next" value="Next" ng-model="create." class="btn_1 nxt_btn" />
+																<button type="button" class="btn_1 nxt_btn" ng-click="active = 2">Next</button>
 															</p>
 														</div>
 														<div role="tabpanel" class="tab-pane fade form-2" id="profile1" aria-labelledby="profile-tab">
